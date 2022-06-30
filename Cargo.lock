@@ -354,13 +354,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2dffe52ecf27772e601905b7522cb4ef790d2cc203488bbd0e2fe85fcb74566d"
 
 [[package]]
-name = "multisig-test"
-version = "0.1.0"
-dependencies = [
- "stacks-common",
-]
-
-[[package]]
 name = "num-integer"
 version = "0.1.45"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -753,6 +746,13 @@ dependencies = [
  "slog",
  "slog-term",
  "time 0.2.27",
+]
+
+[[package]]
+name = "stacks-reference"
+version = "0.1.0"
+dependencies = [
+ "stacks-common",
 ]
 
 [[package]]
