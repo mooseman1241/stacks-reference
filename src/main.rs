@@ -10,7 +10,7 @@ fn main() {
 fn p2wpkh_address() {
     let hash_mode = address::AddressHashMode::SerializeP2WPKH;
 
-    let private_key = Secp256k1PrivateKey::from_hex("c3e1c944086ea6d61e0b9948a62d9608018c00a67424a817f005cf6bba39ce9001").unwrap();
+    let private_key = Secp256k1PrivateKey::from_hex("edf9aee84d9b7abc145504dde6726c64f369d37ee34ded868fabd876c26570bc01").unwrap();
     let public_key = Secp256k1PublicKey::from_private(&private_key);
 
     let address = address::public_keys_to_address_hash(&hash_mode, 1, &vec![public_key]).to_bytes();
@@ -20,7 +20,7 @@ fn p2wpkh_address() {
     let mut b58_address = address.to_vec();
 
     // adding version number
-    b58_address.insert(0, 0);
+    b58_address.insert(0, 5);
     let b58 = b58::check_encode_slice(&b58_address);
 
     println!("P2WPKH B58: {}", b58);
